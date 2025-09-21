@@ -12,7 +12,7 @@ import com.portfolio.YashAuti.service.ExperienceService;
 
 
 @RestController
-@RequestMapping("/api/public/experience")
+@RequestMapping("/api/experience")
 @CrossOrigin(origins = "*")
 public class ExperienceController {
     @Autowired
