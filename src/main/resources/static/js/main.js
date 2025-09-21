@@ -123,30 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData('/api/achievements', achievementsContainer, createAchievementCard);
     fetchData('/api/experience', experienceContainer, createExperienceElement);
 });
-```
 
----
-#### 2. `index.html` (Verification)
-This is the correct HTML structure for your "Projects" section. The `id` attributes are crucial.
 
-**Action:** Compare this with your `index.html` file and make sure they match exactly.
-
-```html
-<!-- In your index.html file -->
-<section id="projects" class="py-5 bg-light-purple">
-    <div class="container">
-        <h2 class="text-center display-5 mb-5">Featured Projects</h2>
-        
-        <!-- ID MUST be "projects-container" -->
-        <div id="projects-container" class="row"></div>
-
-        <div class="text-center mt-5">
-            <!-- ID MUST be "loader" -->
-            <div id="loader" class="loader d-none mx-auto mb-3"></div>
-            
-            <!-- ID MUST be "load-more-btn" -->
-            <button id="load-more-btn" class="btn btn-primary btn-lg">Load More</button>
-        </div>
-    </div>
-</section>
 
