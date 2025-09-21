@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/public/projects")
+@RequestMapping("/api/projects")
 @CrossOrigin(origins = "*")
 public class ProjectController {
     @Autowired
