@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const API_BASE_URL = 'https://portfolio-fullstack-springboot.onrender.com';
+    const API_BASE_URL = 'https://yash-auti-portfolio-fullstack-springboot.onrender.com';
 
     const projectsContainer = document.getElementById('projects-container');
     const loadMoreBtn = document.getElementById('load-more-btn');
