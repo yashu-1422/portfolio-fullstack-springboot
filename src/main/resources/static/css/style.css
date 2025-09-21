@@ -323,3 +323,15 @@ a:hover {
     margin-bottom: 1rem; 
 }
 
+.tech-card {
+    background: linear-gradient(135deg, #2d2d6b 0%, #6c63ff 100%);
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.tech-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(108,99,255,0.2);
+}
+.text-purple { color: #6f42c1 !important; }
+.text-orange { color: #fd7e14 !important; }
+
