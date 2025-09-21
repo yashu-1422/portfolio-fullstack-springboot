@@ -32,18 +32,3 @@ EXPOSE 8081
 
 # The command to run your application when the container starts
 ENTRYPOINT ["java","-jar","app.jar"]
-```
-
----
-### **Step 2: Push the `Dockerfile` to GitHub**
-
-Render needs this new `Dockerfile` to build your project. You must add it to your GitHub repository.
-
-**Action:**
-1.  Open a terminal or command prompt in your project's root folder.
-2.  Run the following commands to add, commit, and push your new file:
-    ```bash
-    git add Dockerfile
-    git commit -m "feat: Add Dockerfile for deployment"
-    git push
-    
