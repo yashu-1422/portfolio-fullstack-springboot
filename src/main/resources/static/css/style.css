@@ -1,0 +1,325 @@
+/*
+  Your custom CSS file.
+  Use this to add your own styles and override Bootstrap defaults.
+*/
+
+/* --- VARIABLE OVERRIDES --- */
+/* You can change Bootstrap's default colors here */
+:root {
+    --bs-primary: #8f5eff; /* Elegant purple accent */
+    --bs-primary-rgb: 143, 94, 255;
+    --bs-dark-bg: #181824;
+    --bs-dark-card: #232336;
+    --bs-dark-text: #f3f3f7;
+    --bs-muted: #b0b3c6;
+}
+
+/* --- CUSTOM STYLES --- */
+body {
+    background: var(--bs-dark-bg);
+    color: var(--bs-dark-text);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Make the navbar buttons stand out a bit more */
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+/* Custom styles for the hero section photo */
+.profile-photo {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border: 5px solid var(--bs-primary);
+    box-shadow: 0 8px 32px rgba(143,94,255,0.35), 0 2px 16px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #232336 60%, #2d1e4a 100%);
+    padding: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.profile-photo:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 12px 48px rgba(143,94,255,0.45), 0 4px 24px rgba(0,0,0,0.35);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.navbar {
+    background: #1a1a2e !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link, .navbar .fab {
+    color: var(--bs-dark-text) !important;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+    background: var(--bs-primary);
+    border: none;
+}
+
+.btn-outline-dark, .btn-outline-dark:focus, .btn-outline-dark:active {
+    color: var(--bs-dark-text);
+    border-color: var(--bs-primary);
+    background: transparent;
+}
+
+.btn-outline-dark:hover {
+    background: var(--bs-primary);
+    color: #fff;
+}
+
+section, .card {
+    background: var(--bs-dark-card);
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+}
+
+.card {
+    border: none;
+}
+
+.card-title, h2, h3, h5 {
+    color: var(--bs-primary);
+}
+
+.card-text, .lead, .text-muted {
+    color: var(--bs-muted) !important;
+}
+
+footer {
+    background: #181824 !important;
+    color: var(--bs-muted) !important;
+}
+
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #232336;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 4px;
+}
+
+/* Add a unique background for the hero section */
+#hero {
+    background: 
+        linear-gradient(135deg, #232336 60%, #2d1e4a 100%),
+        url("data:image/svg+xml;utf8,<svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='40' height='40' fill='none'/><path d='M0 40L40 0' stroke='%236c63ff' stroke-width='0.5' opacity='0.08'/></svg>");
+    background-blend-mode: overlay;
+    background-repeat: repeat;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px rgba(143,94,255,0.10);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#hero .lead {
+    color: #adb5bd;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* --- REVISED SKILLS SECTION STYLES --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 120px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-item i {
+    color: var(--bs-primary);
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.project-card {
+    background: var(--bs-dark-card, #232336);
+    border: 1px solid rgba(143,94,255,0.10);
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(143,94,255,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: var(--bs-dark-text, #f3f3f7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(143,94,255,0.18);
+}
+.card-title {
+    color: var(--bs-primary, #8f5eff);
+    font-weight: 600;
+}
+.card-text {
+    color: var(--bs-muted, #b0b3c6);
+}
+#load-more-btn {
+    margin-top: 1rem;
+}
+.project-buttons {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #fff;
+    border-bottom-color: var(--bs-primary, #8f5eff);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+.d-none {
+    display: none !important;
+}
+
+/* Add this to your <style> tag if it's not already there */
+.bg-light-purple {
+    background-color: var(--bs-light-purple);
+}
+.achievement-card {
+    background-color: var(--bs-dark-purple);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+.icon-circle {
+    background-color: var(--bs-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.experience-card {
+    background: var(--bs-dark-card, #232336);
+    border: 1px solid rgba(143,94,255,0.10);
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(143,94,255,0.08);
+    color: var(--bs-dark-text, #f3f3f7);
+    padding: 2rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.experience-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(143,94,255,0.18);
+}
+.experience-title {
+    color: var(--bs-primary, #8f5eff);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.experience-company {
+    color: var(--bs-muted, #b0b3c6);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.experience-duration {
+    font-size: 0.95rem;
+    color: #adb5bd;
+    margin-bottom: 1rem;
+}
+.experience-description {
+    color: var(--bs-muted, #b0b3c6);
+    font-size: 1rem;
+}
+
+.experience-logo {
+    display: inline-block;
+    border: 3px solid var(--bs-primary, #8f5eff);
+    background: #232336;
+}
+
+/* --- EXPERIENCE SECTION (REVISED) --- */
+#experience-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+    gap: 2rem;              /* Add space between the cards */
+}
+
+.experience-item-wrapper {
+    width: 100%;
+    max-width: 700px; /* Set a max-width for better readability */
+}
+
+.experience-item {
+    background-color: var(--bs-dark-purple);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center; 
+    width: 100%;
+    max-width: 700px; 
+    padding: 2rem;
+}
+
+.experience-icon {
+    font-size: 2.5rem; /* Make the icon bigger */
+    color: var(--bs-primary);
+    margin-bottom: 1rem; 
+}
+
