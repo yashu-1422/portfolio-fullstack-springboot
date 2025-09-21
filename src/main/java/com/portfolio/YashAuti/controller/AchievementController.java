@@ -15,7 +15,7 @@ import java.util.List;
  * Handles HTTP requests from the frontend for the achievements section.
  */
 @RestController
-@RequestMapping("/api/public/achievements")
+@RequestMapping("/api/achievements")
 @CrossOrigin(origins = "*")
 public class AchievementController {
     @Autowired
