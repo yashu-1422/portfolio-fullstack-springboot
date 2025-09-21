@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yash Auti | Java Developer Portfolio</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#"><i class="fas fa-code me-2"></i>Yash Auti</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -34,36 +30,23 @@
     <!-- Hero Section -->
     <section id="hero" class="text-center py-5">
         <div class="container">
-            <img src="/images/myphoto.png" alt="A photo of Yash Auti" class="profile-photo rounded-circle mb-3">
+            <img src="/images/myphoto.png" alt="A photo of Yash Auti" class="profile-photo rounded-circle mb-4">
             <h1 class="display-4 fw-bold">Problem-Solver Building Scalable Java Applications</h1>
             <p class="lead text-white-50">Leveraging a mechanical engineering mindset to create efficient and robust software solutions.</p>
             <a href="#projects" class="btn btn-primary btn-lg m-2">View My Projects</a>
-            <a href="assets/yash_auti_resume.pdf" download="Yash_Auti_Resume.pdf" class="btn btn-outline-light btn-lg m-2" aria-label="Download Resume">
-                <i class="fas fa-file-download fa-2x"></i> Download Resume
-            </a>
-            
+            <a href="/assets/Yash-Auti-Resume.pdf" class="btn btn-outline-light btn-lg m-2" download>Download Resume</a>
         </div>
     </section>
-
+    
     <!-- Skills Section (Static) -->
     <section id="skills" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">My Tech Stack</h2>
-            <!-- Your skills grid HTML can be placed here as it is static -->
-             <h3 class="text-center h4 mb-4">Programming & Databases</h3>
-            <div class="skills-grid text-center mb-5">
-                <div class="skill-item"><i class="fab fa-java fa-2x"></i><p>Java</p></div>
-                <div class="skill-item"><i class="fab fa-python fa-2x"></i><p>Python</p></div>
-                <div class="skill-item"><i class="fas fa-database fa-2x"></i><p>SQL</p></div>
-                <div class="skill-item"><i class="fas fa-database fa-2x"></i><p>MySQL</p></div>
-            </div>
-            <h3 class="text-center h4 mb-4">Frameworks & Frontend</h3>
-            <div class="skills-grid text-center mb-5">
-                <div class="skill-item"><i class="fas fa-leaf fa-2x"></i><p>Spring Boot</p></div>
-                <div class="skill-item"><i class="fab fa-html5 fa-2x"></i><p>HTML5</p></div>
-                <div class="skill-item"><i class="fab fa-css3-alt fa-2x"></i><p>CSS3</p></div>
-                <div class="skill-item"><i class="fab fa-js fa-2x"></i><p>JavaScript</p></div>
-                <div class="skill-item"><i class="fab fa-bootstrap fa-2x"></i><p>Bootstrap</p></div>
+            <h2 class="text-center display-5 mb-5">My Tech Stack</h2>
+            <div class="row text-center">
+                 <div class="col-md-3 col-6 mb-4"><h3 class="h5">Languages</h3><p class="text-muted">Java, Python, SQL</p></div>
+                 <div class="col-md-3 col-6 mb-4"><h3 class="h5">Frameworks</h3><p class="text-muted">Spring Boot, Hibernate</p></div>
+                 <div class="col-md-3 col-6 mb-4"><h3 class="h5">Frontend</h3><p class="text-muted">HTML, CSS, JS, Bootstrap</p></div>
+                 <div class="col-md-3 col-6 mb-4"><h3 class="h5">Tools</h3><p class="text-muted">Git, GitHub, Docker</p></div>
             </div>
         </div>
     </section>
@@ -72,9 +55,8 @@
     <section id="projects" class="py-5 bg-light-purple">
         <div class="container">
             <h2 class="text-center display-5 mb-5">Featured Projects</h2>
-            <div id="projects-container" class="row">
-                <!-- Project cards will be injected here by JS -->
-            </div>
+            <!-- THE FIX: The ID here MUST be "projects-container" -->
+            <div id="projects-container" class="row"></div>
             <div class="text-center mt-5">
                 <div id="loader" class="loader d-none mx-auto mb-3"></div>
                 <button id="load-more-btn" class="btn btn-primary btn-lg">Load More</button>
@@ -84,53 +66,39 @@
 
     <!-- Achievements Section (Dynamic) -->
     <section id="achievements" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Achievements</h2>
-        <div id="achievements-container" class="row"></div>
-    </div>
-</section>
+        <div class="container">
+            <h2 class="text-center display-5 mb-5">Achievements & Certifications</h2>
+            <!-- THE FIX: The ID here MUST be "achievements-container" -->
+            <div id="achievements-container" class="row justify-content-center"></div>
+        </div>
+    </section>
 
     <!-- Experience Section (Dynamic) -->
-    <section id="experience" class="py-5">
-    <div class="container">
-        <!-- Logo at the top -->
-        <div class="text-center mb-4">
-            
+    <section id="experience" class="py-5 bg-light-purple">
+        <div class="container">
+            <h2 class="text-center display-5 mb-5">Professional Experience</h2>
+            <!-- THE FIX: The ID here MUST be "experience-container" -->
+            <div id="experience-container" class="row justify-content-center"></div>
         </div>
-        <!-- Experience cards below -->
-        <div id="experience-container">
-            <!-- Experience cards will be injected here by JS -->
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section (Static) -->
     <section id="contact" class="py-5 text-center">
         <div class="container">
             <h2 class="display-5 mb-3">Let's Get In Touch</h2>
-            <a href="mailto:yashauti5@gmail.com" class="btn btn-primary btn-lg mb-4">
-                <i class="fas fa-envelope me-2"></i> yashauti5@gmail.com
-            </a>
-            <div>
-                <a href="https://github.com/yashu-1422" target="_blank" rel="noopener noreferrer" class="mx-3 text-white-50" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/yash-auti-8277b032b/" target="_blank" rel="noopener noreferrer" class="mx-3 text-white-50" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                
-            </div>
+            <p class="lead text-white-50 mb-4">I'm actively seeking Software Engineer roles. Feel free to reach out!</p>
+            <a href="mailto:yashauti5@gmail.com" class="btn btn-primary btn-lg"><i class="fas fa-envelope me-2"></i>yashauti5@gmail.com</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center py-4">
-        <p class="mb-0">&copy; 2025 Yash Auti | Pune, India</p>
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; 2025 Yash Auti | Pune, India</p>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Your Custom JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
