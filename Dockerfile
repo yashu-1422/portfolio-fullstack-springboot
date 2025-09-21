@@ -1,6 +1,5 @@
-# Stage 1: Use an official Maven image to build the application
-# This creates a temporary container just for building your .jar file.
-FROM maven:3.8.5-openjdk-17 AS build
+# Stage 1: Use a Maven image that supports Java 21 to build the application
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -13,13 +12,11 @@ RUN mvn dependency:go-offline
 COPY src ./src
 
 # Build the application, creating the executable .jar file.
-# The -DskipTests flag is used to speed up the build process during deployment.
 RUN mvn package -DskipTests
 
 
-# Stage 2: Use a lightweight Java image to run the application
-# This creates the final, small container for your live application.
-FROM openjdk:17-jdk-slim
+# Stage 2: Use a lightweight Java 21 image to run the application
+FROM openjdk:21-jdk-slim
 
 # Set the working directory
 WORKDIR /app
